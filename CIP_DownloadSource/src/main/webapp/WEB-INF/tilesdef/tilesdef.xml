@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- layout by user -->
+	<definition name="layout.user"
+		template="/WEB-INF/views/template/layout_user_main.jsp">
+		<put-attribute name="layout.title" value="Multiblog" />
+		<put-attribute name="layout.header" value="/WEB-INF/views/template/user_header.jsp" />
+		<put-attribute name="layout.left" value="/WEB-INF/views/template/user_left.jsp" />
+		<put-attribute name="layout.top" value="/WEB-INF/views/template/user_top.jsp" />
+	</definition>
+	
+	
+	<!-- home -->
+	<definition name="*" extends="layout.user">
+		<put-attribute name="layout.title" value="{1}" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/home.jsp" />
+	</definition>
+	
+	<!-- member -->
+	<definition name="/member/edit" extends="layout.user">
+		<put-attribute name="layout.title" value="Member Edit" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/member/member_edit.jsp" />
+	</definition>
+	
+	<definition name="/member/list" extends="layout.user">
+		<put-attribute name="layout.title" value="Member List" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/member/member_list.jsp" />
+	</definition>
+	
+	<definition name="/member/read" extends="layout.user">
+		<put-attribute name="layout.title" value="Member Read" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/member/member_read.jsp" />
+	</definition>
+	
+	<!-- organization -->
+	<definition name="/organization/edit" extends="layout.user">
+		<put-attribute name="layout.title" value="Organization Edit" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/organization/organization_edit.jsp" />
+	</definition>
+	
+	<definition name="/organization/list" extends="layout.user">
+		<put-attribute name="layout.title" value="Organization List" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/organization/organization_list.jsp" />
+	</definition>
+	
+	<definition name="/organization/read" extends="layout.user">
+		<put-attribute name="layout.title" value="Organization Read" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/organization/organization_read.jsp" />
+	</definition>
+	
+	<!-- commonCode -->
+	<definition name="/commonCode/edit" extends="layout.user">
+		<put-attribute name="layout.title" value="Organization Edit" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/commonCode/commonCode_edit.jsp" />
+	</definition>
+	
+	<definition name="/commonCode/list" extends="layout.user">
+		<put-attribute name="layout.title" value="Organization List" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/commonCode/commonCode_list.jsp" />
+	</definition>
+	
+	<definition name="/commonCode/read" extends="layout.user">
+		<put-attribute name="layout.title" value="Organization Read" />
+		<put-attribute name="layout.body" value="/WEB-INF/views/commonCode/commonCode_read.jsp" />
+	</definition>
+	
+</tiles-definitions>
